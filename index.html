@@ -7,55 +7,84 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="stars"></div>
-    <header>
-      <h1>Cosmic Foundry</h1>
-      <p>From asteroid mining to galactic manufacturing.</p>
-      <button id="mineRockBtn" class="primary">Mine Rock</button>
-      <div id="statusBar"></div>
+    <div class="bg-noise"></div>
+
+    <header class="topbar">
+      <div>
+        <h1>Cosmic Foundry</h1>
+        <p id="phaseLine">Asteroid bootstrap underway.</p>
+      </div>
+      <div class="top-actions">
+        <button id="mineRockBtn" class="primary">Mine Rock</button>
+        <button id="collapseBtn" class="danger">Cosmic Collapse</button>
+      </div>
     </header>
 
+    <div id="statusBar" class="statusbar"></div>
+
+    <nav class="tabs" id="tabNav">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="factory">Factory</button>
+      <button class="tab" data-tab="research">Research</button>
+      <button class="tab" data-tab="automation">Automation</button>
+      <button class="tab" data-tab="expansion">Expansion</button>
+      <button class="tab" data-tab="transcendence">Transcendence</button>
+    </nav>
+
     <main>
-      <section class="panel" id="resourcePanel">
-        <h2>Resources</h2>
-        <div id="resourceList" class="grid"></div>
+      <section class="tab-panel active" data-panel="overview">
+        <div class="panel visual-panel">
+          <h2>Planet View</h2>
+          <canvas id="planetCanvas" width="900" height="420"></canvas>
+          <p class="hint">Factories illuminate the surface. Satellites appear as you unlock automation, planets, and megastructures.</p>
+        </div>
+        <div class="panel">
+          <h2>Resources</h2>
+          <div id="resourceList" class="grid"></div>
+        </div>
       </section>
 
-      <section class="panel" id="factoryPanel">
-        <h2>Factory</h2>
-        <div id="buildingList" class="list"></div>
+      <section class="tab-panel" data-panel="factory">
+        <div class="panel">
+          <h2>Factory Structures</h2>
+          <div id="buildingList" class="list"></div>
+        </div>
       </section>
 
-      <section class="panel" id="automationPanel">
-        <h2>Automation</h2>
-        <div id="automationList" class="list"></div>
+      <section class="tab-panel" data-panel="research">
+        <div class="panel">
+          <h2>Research Tree</h2>
+          <div id="researchList" class="list"></div>
+        </div>
       </section>
 
-      <section class="panel" id="researchPanel">
-        <h2>Research Tree</h2>
-        <div id="researchList" class="list"></div>
+      <section class="tab-panel" data-panel="automation">
+        <div class="panel">
+          <h2>Automation Control</h2>
+          <div id="automationList" class="list"></div>
+        </div>
       </section>
 
-      <section class="panel" id="planetPanel">
-        <h2>Planet Map</h2>
-        <div id="planetList" class="list"></div>
+      <section class="tab-panel" data-panel="expansion">
+        <div class="panel">
+          <h2>Planetary Expansion</h2>
+          <div id="planetList" class="list"></div>
+        </div>
+        <div class="panel">
+          <h2>Megastructures</h2>
+          <div id="megaList" class="list"></div>
+        </div>
       </section>
 
-      <section class="panel" id="megaPanel">
-        <h2>Megastructures</h2>
-        <div id="megaList" class="list"></div>
-      </section>
-
-      <section class="panel" id="prestigePanel">
-        <h2>Cosmic Collapse</h2>
-        <p>Reset industry for permanent <strong>Dark Matter</strong>.</p>
-        <button id="collapseBtn" class="danger">Collapse the Current Universe</button>
-        <div id="prestigeInfo"></div>
-      </section>
-
-      <section class="panel" id="logPanel">
-        <h2>Event Log</h2>
-        <div id="logList" class="log"></div>
+      <section class="tab-panel" data-panel="transcendence">
+        <div class="panel">
+          <h2>Collapse Metrics</h2>
+          <div id="prestigeInfo"></div>
+        </div>
+        <div class="panel">
+          <h2>Event Log</h2>
+          <div id="logList" class="log"></div>
+        </div>
       </section>
     </main>
 
