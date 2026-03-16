@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Foundry</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <header>
+      <h1>Cosmic Foundry</h1>
+      <p>From asteroid mining to galactic manufacturing.</p>
+      <button id="mineRockBtn" class="primary">Mine Rock</button>
+      <div id="statusBar"></div>
+    </header>
+
+    <main>
+      <section class="panel" id="resourcePanel">
+        <h2>Resources</h2>
+        <div id="resourceList" class="grid"></div>
+      </section>
+
+      <section class="panel" id="factoryPanel">
+        <h2>Factory</h2>
+        <div id="buildingList" class="list"></div>
+      </section>
+
+      <section class="panel" id="automationPanel">
+        <h2>Automation</h2>
+        <div id="automationList" class="list"></div>
+      </section>
+
+      <section class="panel" id="researchPanel">
+        <h2>Research Tree</h2>
+        <div id="researchList" class="list"></div>
+      </section>
+
+      <section class="panel" id="planetPanel">
+        <h2>Planet Map</h2>
+        <div id="planetList" class="list"></div>
+      </section>
+
+      <section class="panel" id="megaPanel">
+        <h2>Megastructures</h2>
+        <div id="megaList" class="list"></div>
+      </section>
+
+      <section class="panel" id="prestigePanel">
+        <h2>Cosmic Collapse</h2>
+        <p>Reset industry for permanent <strong>Dark Matter</strong>.</p>
+        <button id="collapseBtn" class="danger">Collapse the Current Universe</button>
+        <div id="prestigeInfo"></div>
+      </section>
+
+      <section class="panel" id="logPanel">
+        <h2>Event Log</h2>
+        <div id="logList" class="log"></div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
